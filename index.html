@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pravilnoe pitanye</title>
+  
+</head>
+<body>
+    <header>
+        <h1>Счётчик калорий</h1>
+    </header>
+    <div class="basis">      
+         <a name="calc"></a>
+                    <fieldset class="block" id="sex">                <legend>Пол</legend>
+                        <div class="buton">
+                            <label for="sex">Женский</label>
+                            <input type="radio" id="w" name="sex" value="women" >
+                        </div>
+                        <div class="button">
+                            <label for="men">Мужской</label>
+                            <input type="radio" id="m" name="sex" value="men">
+                        </div>
+                    </fieldset>
+                   <fieldset>
+                        <legend>Характеристики:</legend>
+                        <form name="param">
+                            <div>
+                                <label for="height">Ваш рост (см):</label>
+                                <input name="height" id="my-height" type="text" maxlength="3" value=""/>
+                            </div>
+                           <div>
+                               <label for="weight">Ваш вес:</label>
+                               <input name="weight" id="my-weight" type="text" maxlength="4" value=""/>
+                           </div>
+                           <div>
+                               <label for="age">Ваш возраст:</label>
+                               <input name="age" id="my-age" type="text" maxlength="3" value=""/>
+                           </div>
+                    </form>
+                   </fieldset>
+                    </br>
+                   <button type="submit" id="calculate">Рассчитать</button>
+                   <fieldset id="cal-result">
+                        <legend>Результат:</legend>
+                        <p>Индекс массы тела: <strong><span id="cl-index"></span> </strong></p>
+                        <p>Суточная норма потребления калорий: <strong><span id="day-cal">0</span> кКал</strong></p>
+                    </fieldset>
+        </div>  
+    <main>
+     <script src="scripts/build/main.js"></script>
+ </body>
+ </html>
