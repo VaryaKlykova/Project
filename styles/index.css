@@ -1,0 +1,90 @@
+body
+{
+    font: 18px/26px Arial, Tahoma, "Open Sans",sans-serif;
+    margin: auto;
+    width: 1280px;
+    background: rgb(235, 245, 247)
+}
+
+h1{
+    padding: 3%;
+    text-align: center;
+}
+
+h2{
+    padding: 0 0 0 320px;
+    text-align: left;
+    font-size: 24px;
+}
+button
+{
+    display: inline-block;
+    padding: 1%; 
+    margin: 0.4%;
+    font-size: 17px;
+    color: rgb(49, 37, 37)
+
+    
+}
+a{
+    color:rgb(49, 37, 37);
+    display: none;
+}
+.start{
+    margin: 1%;
+}
+
+.all{
+    margin: 0.4%;
+}
+
+.calculate{
+    margin: 2%;
+    background: rgb(167, 202, 209)
+}
+
+.Pitanie{
+    margin: 2%;
+    background: rgb(167, 202, 209)
+}
+
+.charact{
+    width: 580px;
+    margin: auto;
+}
+
+.rot{
+    text-align: center;
+}
+
+.block{
+    text-align: center;
+}
+
+.cor{
+    display: none;
+}
+
+.p1200{
+    display: none;
+}
+
+.p1400{
+    display: none;
+}
+
+.p1600{
+    display: none;
+}
+
+.p1800{
+    display: none;
+}
+
+.p2000{
+    display: none;
+}
+
+.p2200{
+    display: none;
+}

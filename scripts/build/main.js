@@ -81,17 +81,32 @@ index_1.default();
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var initButton_1 = __webpack_require__(2);
+var initCalcul_1 = __webpack_require__(2);
+var initPitan_1 = __webpack_require__(4);
+function main() {
+    initCalcul_1.default();
+    initPitan_1.default();
+}
+exports.default = main;
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
 var initButtonRadio_1 = __webpack_require__(3);
-var previousSexButton = document.getElementById('women');
 function main() {
     initSex('block');
     initCalc();
 }
 exports.default = main;
+var previousSexButton = document.getElementById('women');
 function initSex(button) {
     var input = document.getElementsByClassName(button);
-    var onChecked = function (event) {
+    var onExtern = function (event) {
         if (event == undefined) {
             return;
         }
@@ -103,13 +118,13 @@ function initSex(button) {
             previousSexButton = target;
         }
     };
-    initButtonRadio_1.default(input[0], onChecked);
+    initButtonRadio_1.default(input[0], onExtern);
 }
 function initCalc() {
     var button = document.getElementById('calculate');
     var elem = document.getElementById('cl-index');
     var elem2 = document.getElementById('day-cal');
-    var onCalc = function (event) {
+    var onExtern = function (event) {
         if (event == undefined) {
             return;
         }
@@ -123,7 +138,7 @@ function initCalc() {
         elem.innerHTML = String(imt);
         elem2.innerHTML = String(sbi);
     };
-    initButton_1.default(button, onCalc);
+    button.addEventListener('click', onExtern);
 }
 function calculateSBI(s, h, w, a) {
     if (s === 'women') {
@@ -136,24 +151,6 @@ function calculateSBI(s, h, w, a) {
 function calculateIMT(h, w) {
     return Math.round((w / (Math.pow(h / 100, 2))) * 10) / 10;
 }
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-;
-function buttonAction(button, act) {
-    var onAct = function (event) {
-        act(event);
-        event.preventDefault();
-    };
-    button.addEventListener('click', onAct);
-}
-exports.default = buttonAction;
 
 
 /***/ }),
@@ -171,6 +168,166 @@ function main(block, change) {
     block.addEventListener('change', onChange);
 }
 exports.default = main;
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+function main() {
+    initPit();
+    init1200();
+    init1400();
+    init1600();
+    init1800();
+    init2000();
+    init2200();
+}
+exports.default = main;
+function initPit() {
+    var button = document.getElementById('Pitanie');
+    var b = document.getElementById('basis');
+    var c = document.getElementById('cor');
+    var r = document.getElementById('retur');
+    var onExtern = function (event) {
+        if (event == undefined) {
+            return;
+        }
+        b.style.display = 'none';
+        c.style.display = 'block';
+        r.style.display = 'block';
+    };
+    button.addEventListener('click', onExtern);
+}
+function init1200() {
+    var button = document.getElementById('1200');
+    var x12 = document.getElementById('p1200');
+    var x14 = document.getElementById('p1400');
+    var x16 = document.getElementById('p1600');
+    var x18 = document.getElementById('p1800');
+    var x20 = document.getElementById('p2000');
+    var x22 = document.getElementById('p2200');
+    var onExtern = function (event) {
+        if (event == undefined) {
+            return;
+        }
+        x12.style.display = 'block';
+        x14.style.display = 'none';
+        x16.style.display = 'none';
+        x18.style.display = 'none';
+        x20.style.display = 'none';
+        x22.style.display = 'none';
+    };
+    button.addEventListener('click', onExtern);
+}
+function init1400() {
+    var button = document.getElementById('1400');
+    var x12 = document.getElementById('p1200');
+    var x14 = document.getElementById('p1400');
+    var x16 = document.getElementById('p1600');
+    var x18 = document.getElementById('p1800');
+    var x20 = document.getElementById('p2000');
+    var x22 = document.getElementById('p2200');
+    var onExtern = function (event) {
+        if (event == undefined) {
+            return;
+        }
+        x12.style.display = 'none';
+        x14.style.display = 'block';
+        x16.style.display = 'none';
+        x18.style.display = 'none';
+        x20.style.display = 'none';
+        x22.style.display = 'none';
+    };
+    button.addEventListener('click', onExtern);
+}
+function init1600() {
+    var button = document.getElementById('1600');
+    var x12 = document.getElementById('p1200');
+    var x14 = document.getElementById('p1400');
+    var x16 = document.getElementById('p1600');
+    var x18 = document.getElementById('p1800');
+    var x20 = document.getElementById('p2000');
+    var x22 = document.getElementById('p2200');
+    var onExtern = function (event) {
+        if (event == undefined) {
+            return;
+        }
+        x12.style.display = 'none';
+        x14.style.display = 'none';
+        x16.style.display = 'block';
+        x18.style.display = 'none';
+        x20.style.display = 'none';
+        x22.style.display = 'none';
+    };
+    button.addEventListener('click', onExtern);
+}
+function init1800() {
+    var button = document.getElementById('1800');
+    var x12 = document.getElementById('p1200');
+    var x14 = document.getElementById('p1400');
+    var x16 = document.getElementById('p1600');
+    var x18 = document.getElementById('p1800');
+    var x20 = document.getElementById('p2000');
+    var x22 = document.getElementById('p2200');
+    var onExtern = function (event) {
+        if (event == undefined) {
+            return;
+        }
+        x12.style.display = 'none';
+        x14.style.display = 'none';
+        x16.style.display = 'none';
+        x18.style.display = 'block';
+        x20.style.display = 'none';
+        x22.style.display = 'none';
+    };
+    button.addEventListener('click', onExtern);
+}
+function init2000() {
+    var button = document.getElementById('2000');
+    var x12 = document.getElementById('p1200');
+    var x14 = document.getElementById('p1400');
+    var x16 = document.getElementById('p1600');
+    var x18 = document.getElementById('p1800');
+    var x20 = document.getElementById('p2000');
+    var x22 = document.getElementById('p2200');
+    var onExtern = function (event) {
+        if (event == undefined) {
+            return;
+        }
+        x12.style.display = 'none';
+        x14.style.display = 'none';
+        x16.style.display = 'none';
+        x18.style.display = 'none';
+        x20.style.display = 'block';
+        x22.style.display = 'none';
+    };
+    button.addEventListener('click', onExtern);
+}
+function init2200() {
+    var button = document.getElementById('2200');
+    var x12 = document.getElementById('p1200');
+    var x14 = document.getElementById('p1400');
+    var x16 = document.getElementById('p1600');
+    var x18 = document.getElementById('p1800');
+    var x20 = document.getElementById('p2000');
+    var x22 = document.getElementById('p2200');
+    var onExtern = function (event) {
+        if (event == undefined) {
+            return;
+        }
+        x12.style.display = 'none';
+        x14.style.display = 'none';
+        x16.style.display = 'none';
+        x18.style.display = 'none';
+        x20.style.display = 'none';
+        x22.style.display = 'block';
+    };
+    button.addEventListener('click', onExtern);
+}
 
 
 /***/ })
