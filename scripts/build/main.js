@@ -135,8 +135,8 @@ function initCalc() {
         var a = form.elements[2].value;
         var sbi = calculateSBI(String(s), Number(h), Number(w), Number(a));
         var imt = calculateIMT(Number(h), Number(w));
-        elem.innerHTML = String(imt);
-        elem2.innerHTML = String(sbi);
+        elem.textContent = String(imt);
+        elem2.textContent = String(sbi);
     };
     button.addEventListener('click', onExtern);
 }

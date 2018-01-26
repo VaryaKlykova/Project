@@ -51,8 +51,8 @@ function initCalc (): void
         const a = (<HTMLInputElement>form.elements[2]).value;
         const sbi =calculateSBI (String(s), Number(h), Number(w), Number(a));
         const imt = calculateIMT (Number(h), Number(w));
-        elem.innerHTML = String(imt);
-        elem2.innerHTML = String(sbi);
+        elem.textContent = String(imt);
+        elem2.textContent = String(sbi);
     };
 	button.addEventListener( 'click', onExtern);
 }
